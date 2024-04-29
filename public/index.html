@@ -4,12 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Graph Data</title>
-  <script src="/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="/popup.js" defer> </script>
+  <script src="/tree.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h2>Graph Data Visualization</h2>
-  <div id="visualization">
-
+  <div id="app">
+    <transition name="slide">
+      <div id="popup" v-if="selectedNode">
+        <span class="close-button"  @click="deselectNode">X</span>
+        <h2>{{selectedNode.name}}</h2>
+        <p>{{selectedNode.description}}</p>
+      </div>
+    </transition>
+    <div id="tree"></div>
   </div>
 </body>
 </html>

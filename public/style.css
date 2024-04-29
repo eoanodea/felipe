@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  background: #f9f9f9;
+  justify-content: end;
+  position: relative;
+  font-family: Calibri, sans-serif;
+}
+
+#popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 350px;
+  padding: 0 15px;
+  color: #005e5d;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.slide-leave-active {
+  transition: all 1s;
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+.close-button {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  color: white;
+  padding: 0.25em;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  background: #005e5d;
+}
+
+rect {
+  fill: white;
+  stroke: silver;
+  stroke-width: 2;
+  width: 150px;
+  height: 70px;
+  cursor: pointer;
+}
+
+rect:hover {
+  stroke: black;
+  transition: 0.3s ease;
+}
+
+path {
+  fill: none;
+  stroke: silver;
+  stroke-width: 2;
+}
+
+text {
+  font-size: 14px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  cursor: pointer;
+}
+
+.selected {
+  stroke: black;
+}
