@@ -25,6 +25,16 @@ const data = {
       "parent":"A"
       },
       {
+        "name":"E",
+        "description":"This is a description of E",
+        "parent":"A"
+      },
+      {
+        "name":"F",
+        "description":"This is a description of F",
+        "parent":"A"
+      },
+      {
       "name":"B-1",
       "description":"This is a description of B-1",
       "parent":"B"
@@ -38,19 +48,21 @@ const data = {
       "name":"B-3",
       "description":"This is a description of B-3",
       "parent":"B"
+      },
+      {
+        "name":"B-4",
+        "description":"This is a description of B-4",
+        "parent":"B"
+      },
+      {
+        "name":"E-1",
+        "description":"This is a description of E-1",
+        "parent":"E"
       }
   ]
 }
 
 app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.get('/greet/:name', (req, res) => {
-  res.json({message: `Hello, ${req.params.name}`});
-});
 
 app.get('/data', (req, res) => {
   res.json(data);
@@ -59,3 +71,5 @@ app.get('/data', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
 });
+
+module.exports = app;

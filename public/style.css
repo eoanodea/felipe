@@ -19,6 +19,7 @@ body {
   padding: 0 15px;
   color: #005e5d;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .slide-leave-active {
